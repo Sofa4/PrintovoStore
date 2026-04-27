@@ -1,0 +1,136 @@
+.contact-header{
+    height: 188px;
+    background-image: url("photo/bg/dt_hdr_3.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% cover;
+}
+.contact-container
+    {border: 1px solid #12172E; border-radius: 15px; background-color: #FFFDFA;}
+
+#cont-h1{
+
+    font: 40px/1 'NextArtSB';
+    color: #5541BA;
+    padding: 94px 0 0 114px;
+
+}
+.contact-container{
+    min-height: 658px;
+    margin-bottom: -1px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 0px;
+
+}
+.contact-side, .map-side{
+    width: calc(50% +1px);
+}
+.contact-side{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 40px;
+    padding: 60px 114px ;
+}
+
+.contact-side .contact-h2{
+    font: 20px "HelveticaMdm", sans-serif; color: #12172E;
+    padding-bottom: 15px;
+}
+
+.social-imgs, .market-imgs{
+    display: flex;
+    gap: 20%;
+}
+
+.contact-side p + p {
+    margin-top: 0;
+}
+
+
+.map-side{
+    min-height: 658px;
+    width: 70%;
+    overflow: hidden;
+    border: 1px solid #12172E; border-radius: 180px 15px 15px 15px;
+    margin: -1px -1px -1px 0;
+    /* width: calc(50% +1px); */
+}
+.map-side > div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+.map-side iframe {
+    
+width: 100%;
+height: 100%;
+border: none;
+position: absolute;
+top: 0;
+left: 0;
+}
+
+
+
+/* DESKTOP */ 
+@media (min-width: 2301px) {
+    .page-container {    margin: 0 20%;  }
+}
+@media (min-width: 1601px) and (max-width: 2300px) {
+    .page-container {margin: 0 15%;  }
+}
+
+/* ЛАПТОП */
+@media (min-width: 1201px) and (max-width: 1600px) {
+    .page-container {margin: 0 7dvw;}
+    #cont-h1{padding:94px 7.3dvw 0 ;}
+    .contact-side{padding: 60px 7.3dvw;}
+    .map-side{width: 60%;}
+
+    .contact-header{
+    background-image: url("photo/bg/lt_hdr_3-02.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% cover;
+    background-position: top right;
+}
+}
+
+
+/* АЙПАД */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .page-container {    margin: 0 4.8dvw;  }
+
+    /* #cont-h1{font-size: 32px; padding: 140px 4.3dvw 40px 4.3dvw;} */
+    .contact-header{display: none;}
+
+    .contact-container{flex-flow: column nowrap;}
+    .map-side{order: -1; min-height: auto; height: 386px; width: calc(100% + 2px); margin: -1px -1px -1px -1px;}
+    .contact-side p{font-size: 14px;}
+    .contact-h2{font-size: 16px ;}
+    .contact-side{padding: 60px 4.3dvw 120px 4.3dvw; flex-flow: row wrap; gap: 40px;}
+
+    #adress, #phone, #social, #market {width: 40%;}
+    #mail{width: 100%; margin-bottom: 20px; margin-top: -20px;}
+
+
+
+}
+
+/* МОБИЛКА */
+@media (max-width: 768px) {  
+    .page-container {    margin: 0 3.1dvw;  }
+    
+    .contact-header{display: none;}
+
+    .contact-container{flex-flow: column nowrap;}
+    .map-side{order: -1; min-height: auto; height: 386px; width: calc(100% + 2px); margin: -1px -1px -1px -1px; border-radius: 90px 15px 15px 15px;}
+    .contact-side p{font-size: 14px;}
+    .contact-h2{font-size: 16px ;}
+    .contact-side{padding: 60px 8.2dvw 120px 8.2dvw; flex-flow: column nowrap; gap: 46px;}
+
+    /* #adress, #phone, #social, #market {width: 40%;}
+    #mail{width: 100%; margin-bottom: 20px; margin-top: -20px;} */
+}

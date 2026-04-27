@@ -1,0 +1,350 @@
+/* Общие стили для модального окна */
+.modal-overlay {
+    display: none; /* Изначально скрыто */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    color: #12172E;
+}
+
+.modal-content {
+    position: absolute;
+    width: 100%; /* На всю ширину экрана */
+    height: 100%; /* На всю высоту экрана */
+    background: #FFFDFA;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Прокрутка по вертикали, если контент выходит за пределы */
+    box-sizing: border-box;
+    font-family: "HelveticaLght";
+    font-size: 16px;
+    line-height: 1.2;
+    color: #12172E;
+
+    background-image:
+    url("photo/bg/bg_dt.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.modal-header, .modal-body, .product-images, .main-image, .thumbnail-gallery, .product-info
+{border: 1px solid #12172E; border-radius: 15px; background-color: #FFFDFA;}
+.modal-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 74px;
+    margin: 0 15%;
+    margin-bottom: -1px;
+}
+
+.close-btn {
+    position: relative;
+    /* width: 40px;             
+    height: 40px;             */
+    cursor: pointer;
+    padding-right: 100px;
+    transition: transform 0.2s ease;
+}
+.close-btn::before,
+.close-btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;              /* длина линий */
+    height: 1.5px;              /* толщина линий */
+    background-color: #12172E;   /* цвет линий */
+    transition: background-color 0.2s, transform 0.2s;
+    transform-origin: center;
+}
+
+.close-btn::before { transform: translate(-50%, -50%) rotate(45deg);  }
+.close-btn::after { transform: translate(-50%, -50%) rotate(-45deg);  }
+.close-btn:hover::before, .close-btn:hover::after { background-color: #EF88A3;}
+.close-btn:hover{ transform: scale(1.05); height: 2px;  }
+.close-btn:active::before, .close-btn:active::after { background-color: #5541BA;}
+.close-btn:active{ transform: scale(0.95);}
+
+.product-name {
+    font:40px/1 'NextArtReg';color: #12172E;
+}
+
+.modal-body {
+    display: flex;
+    margin: 0 15%;
+}
+
+/* Левая часть с изображениями */
+.product-images {
+    width: calc(50%);
+    display: flex;
+    flex-direction: column;
+    margin: -2px -1px -1px -1px;
+    /* align-items: center; */
+}
+.main-image, .thumbnail-gallery{overflow: hidden; margin: -1px -1px -1px -1px;}
+.main-image img {
+    width: 100%;
+    height: auto;
+    /* max-height: 400px; */
+    object-fit: cover;
+}
+.thumbnail-gallery {
+    height: 200px;
+    margin: 0px -1px -1px -1px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+.scroll-inner {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x:auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+}
+.scroll-inner.dragging {
+    cursor: grabbing;
+  }
+.scroll-inner::-webkit-scrollbar {
+    height: 10px;
+}  
+.scroll-inner::-webkit-scrollbar-thumb {
+    background-color: #EF88A3;
+    border-radius: 4px;
+}
+.thumbnail-wrapper{
+    height: 90%;
+    width:fit-content;
+    border: 1px solid #12172E; border-radius: 15px;
+    margin-left: -1px;
+    transition: transform 0.2s ease, border 0.2s ease;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.thumbnail-gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.thumbnail-wrapper:hover{
+    border: 1px solid #EF88A3; border-radius: 15px;
+    transform: scale(1.05);
+    margin: 0 2px;
+}
+.thumbnail-wrapper:active{transform :scale(0.98); border: 1px solid #5541BA; border-radius: 15px;}
+.thumbnail-wrapper.active{
+    border: 1px solid #5541BA; border-radius: 15px;
+    transform :scale(1.05) ;
+    margin: 0 3px;
+}
+
+/* Правая часть с информацией */
+.product-info {
+    width: calc(50% + 3px);
+    margin: -2px -1px -1px 0;
+}
+.product-name-wrap{
+    width: calc(100% + 4px);
+    border: 1px solid #12172E; border-radius: 15px;
+    padding: 20px 60px;
+    min-height: 114px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: -1px -2px 0 -2px;
+}
+.product-name {
+    font: 40px/1 'NextArtReg';
+}
+.subtitle {
+    margin: 2px 0 0 2px;
+}
+.product-otherinfo-wrap{
+    padding: 0 60px;
+    margin-top: 60px;
+}
+
+.description {
+    margin-bottom: 40px;
+    max-width: 436px;
+}
+.note{max-width: 436px;}
+.modal-h2{
+    font: 20px/1 'HelveticaMdm';
+    margin-bottom: 20px;
+}
+
+.custom-select {
+    margin-bottom: 68px;
+}
+
+.marketplaces {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.marketplace-link {
+    margin-right: 60px;
+    transition: all 0.2s ease;
+}
+.marketplace-link:hover {
+    transform: scale(1.05);
+}
+.marketplace-link:active {
+    transform: scale(0.95);
+}
+.specs {
+    margin-bottom: 40px;
+    font: lighter;
+}
+
+.note { padding-bottom: 40px;}
+
+.custom-select {
+    position: relative;
+    height: 40px;
+    width: 282px;
+    font-family: inherit;
+  }
+.select-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid #12172E;
+    border-radius: 15px;
+    background-color: #FFFDFA;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.select-trigger:hover{
+    border: 1px solid #EF88A3;
+    color: #EF88A3;
+    /* font-size: 17px; */
+    /* border-color: #EF88A3; */
+}
+.select-trigger:hover .arrow {
+    border-color: #EF88A3;
+  }
+/* Стрелочка */
+.arrow {
+    width: 12px;
+    height: 12px;
+    border-left: 1.5px solid #12172E;
+    border-bottom: 1.5px solid #12172E;
+    transform: rotate(315deg); /* вниз */
+    transform-origin: center center;
+    transition: all 0.2s ease;
+    margin-left: 10px;
+    margin-bottom: 2px;
+  }
+  .select-trigger.open .arrow {
+    transform: rotate(135deg); /* вверх */
+    margin-top: 6px;
+    margin-bottom: 0;
+  }
+  /* .select-trigger.active {
+    border-color: #EF88A3;
+    color: #EF88A3;
+  }
+  .select-trigger.active .arrow {
+    border-color: #EF88A3;
+  } */
+   
+  .options {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: #FFFDFA;
+    border: 1px solid #12172E;
+    border-radius:15px;
+    z-index: 10;
+    overflow: hidden;
+    margin-top: -1px;
+  }
+  .options:hover{
+    border: 1px solid #EF88A3;
+  }
+  .option {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .option:hover {
+    color: #EF88A3;
+    font-size: 17px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+
+  /* DESKTOP */ 
+@media (min-width: 2301px) {
+    .modal-header, .modal-body {    margin: 0 20%;  }
+}
+@media (min-width: 1601px) and (max-width: 2300px) {
+    .modal-header, .modal-body  {margin: 0 15%;  }
+}
+
+/* ЛАПТОП */
+@media (min-width: 1201px) and (max-width: 1600px) {
+    .modal-header, .modal-body  {margin: 0 7dvw;}
+
+}
+
+/* АЙПАД */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .modal-header, .modal-body  {margin: 0 4.8dvw;}
+    .modal-body{flex-direction: column;}
+
+    .main-image{max-height: 752px; width: calc(100% + 2px);}
+    .product-images, .product-info{width: calc(100% + 2px);}
+    .product-images{margin: -2px -1px 0px -1px;}
+    .thumbnail-gallery{height: 170px; }
+
+    .product-name{font-size: 32px;} .modal-h2{font-size: 16px;}
+    p{font-size: 16px;} .modal-h2 {margin-bottom: 16px;}
+
+    .product-info{margin:-1px -1px 0 -1px ;}
+    .product-name-wrap {width: calc(100% + 2px); margin: -1px -1px 0 -1px; padding: 20px 4.3dvw}
+    .product-otherinfo-wrap{padding: 56px 4.3dvw 94px 4.3dvw; margin-top: 0;}
+    .description, .note{max-width: 70%;}
+    .marketplaces{gap: 12%}
+    .marketplace-link{margin: 0;}
+}
+/* МОБИЛКА */
+@media (max-width: 768px) {  
+    .modal-header, .modal-body {margin: 0 3.1dvw;}
+    .modal-body{flex-direction: column;}
+    
+    .main-image{max-height: 378px; width: calc(100% + 2px);}
+    .main-image img{height: 100%; width: 100%;}
+    .product-images, .product-info{width: calc(100% + 2px);}
+    .product-images{margin: -2px -1px 0px -1px;}
+    .thumbnail-gallery{height: 170px; }
+    
+    .product-name{font-size: 24px;} .modal-h2{font-size: 16px;} .modal-h2 {margin-bottom: 16px;}
+    p{font-size: 16px;} .subtitle{margin-top: 10px;}
+
+    .product-info{margin:-1px -1px 0 -1px ;}
+    .product-name-wrap {width: calc(100% + 2px); margin: -1px -1px 0 -1px; padding: 20px 8.2dvw}
+    .product-otherinfo-wrap{padding: 56px 8.2dvw 94px 8.2dvw; margin-top: 0;}
+    .description, .custom-select, .marketplaces, .note{width: 100%;}
+    .marketplaces{justify-content: space-between;}
+    .marketplace-link{margin: 0;}
+
+}

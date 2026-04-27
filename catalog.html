@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Printovo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="css/indexstyle.css" />
+  <link rel="stylesheet" href="css/modalstyle.css" />
+  <link rel="stylesheet" href="css/catalogstyle.css" />
+</head>
+<body>
+<div class="page-container">
+
+  <header>
+    <a href="index.html" class="logo-nav-link"><img class="logo-nav" src="photo/icons/logo-nav.svg" alt="logo"></a>
+    <nav class="nav">
+      <a href="catalog.html">Каталог</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+    
+    <button class="menu-toggle" >
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu">
+      <a href="catalog.html">Каталог</a>
+      <a href="contact.html">Контакты</a>
+  </div>
+
+  <main>
+    <section class="cat-banner">
+        <div class="swiper cat-b-slider">
+            <div class="swiper-wrapper">
+              <!-- Картинки вставим в JS -->
+            </div>
+          </div>
+        <div class="cat-b-rightcont">
+            <div class="cat-b-text">
+                <p>Printovo&nbsp;&mdash; это не&nbsp;просто магазин, это сочетание технологий, креативности и&nbsp;заботы о&nbsp;клиенте. </p>
+            </div>
+            
+            <div class="cat-b-runtext">
+            <div class="runtext-wrapper">
+                <p class="runtext">Для индивидуальных заказов свяжитесь с нами по телефону или через наши соцсети ❤ </p>
+                <p class="runtext">Для индивидуальных заказов свяжитесь с нами по телефону или через наши соцсети ❤</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="marketplace">
+        <p class="cont">Ищите наши товары на маркетплейсах!</p>
+        <div class="mp-links">
+            <img src="photo/icons/ozon_icon.svg" alt="logo_marketplace" id="nprdct-links-img">
+            <img src="photo/icons/wb_icon.svg" alt="logo_marketplace" id="nprdct-links-img">
+            <img src="photo/icons/yamarket_icon.svg" alt="logo_marketplace" id="nprdct-links-img">
+        </div>              
+    </section>
+
+    <section class="catalog-head">
+        <div class="catalog-header">
+            <p class="section-h1" id="ctlg-h1">Каталог</p>
+        </div>
+        <div class="filter-cont">
+            <div class="catalog-filter-bar">
+                <div class="filters">
+                    <!-- Фильтр 1 -->
+                    <div class="filter-dropdown" data-group="toys">
+                      <button class="filter-trigger">
+                        <span class="filter-label">Игрушки и модели</span>
+                        <span class="arrow"></span>
+                      </button>
+                      <div class="filter-options hidden">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="toys" value="all">
+                            <span class="checkmark"></span> 
+                            <span class="checkbox-label-text">Всё</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="toys" value="игрушки"> 
+                            <span class="checkmark"></span> 
+                            <span class="checkbox-label-text">Игрушки</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="toys" value="сборка"> 
+                            <span class="checkmark"></span> 
+                            <span class="checkbox-label-text">Модели для сборки</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="toys" value="персонажи">
+                            <span class="checkmark"></span> 
+                            <span class="checkbox-label-text">Фигурки персонажей</span>
+                        </label>
+                        <button type="button" class="reset-filter-btn">Очистить фильтр</button>
+                      </div>
+                    </div>
+                  
+                    <!-- Фильтр 2 -->
+                    <div class="filter-dropdown" data-group="home">
+                      <button class="filter-trigger">
+                        <span class="filter-label">Для дома</span>
+                        <span class="arrow"></span>
+                      </button>
+                      <div class="filter-options hidden">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="home" value="all">
+                            <span class="checkmark"></span>  
+                            <span class="checkbox-label-text">Всё</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="home" value="декор">
+                            <span class="checkmark"></span>  
+                            <span class="checkbox-label-text">Декор</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="home" value="свет">
+                            <span class="checkmark"></span>  
+                            <span class="checkbox-label-text">Свет</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="home" value="растения">
+                            <span class="checkmark"></span>  
+                            <span class="checkbox-label-text">Для растений</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="home" value="ванная">
+                            <span class="checkmark"></span>  
+                            <span class="checkbox-label-text">Для ванной</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="home" value="порядок">
+                            <span class="checkmark"></span>  
+                            <span class="checkbox-label-text">Организация пространства</span>
+                        </label>
+                        <button type="button" class="reset-filter-btn">Очистить фильтр</button>
+                      </div>
+                    </div>
+                  
+                    <!-- Фильтр 3 -->
+                    <div class="filter-dropdown" data-group="hobby">
+                      <button class="filter-trigger">
+                        <span class="filter-label">Хобби</span>
+                        <span class="arrow"></span>
+                      </button>
+                      <div class="filter-options hidden">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="hobby" value="all"> 
+                            <span class="checkmark"></span> 
+                            <span class="checkbox-label-text">Всё</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="hobby" value="творчество"> 
+                            <span class="checkmark"></span> 
+                            <span class="checkbox-label-text">Наборы для творчества</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="hobby" value="игры">
+                            <span class="checkmark"></span> 
+                            <span class="checkbox-label-text">Для настольных игр</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="hobby" value="статуэтки">
+                            <span class="checkmark"></span>
+                            <span class="checkbox-label-text">Статуэтки</span>
+                        </label>
+                        <button type="button" class="reset-filter-btn">Очистить фильтр</button>
+                      </div>
+                    </div>
+                  
+                    <!-- Фильтр 4 -->
+                    <div class="filter-dropdown" data-group="souvenir">
+                      <button class="filter-trigger">
+                        <span class="filter-label">Сувениры</span>
+                        <span class="arrow"></span>
+                      </button>
+                      <div class="filter-options hidden">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="souvenir" value="all">
+                            <span class="checkmark"></span>  
+                            <span class="checkbox-label-text">Всё</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="souvenir" value="брелоки">
+                            <span class="checkmark"></span>  
+                            <span class="checkbox-label-text">Брелоки</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="souvenir" value="фоторамки">
+                            <span class="checkmark"></span>  
+                            <span class="checkbox-label-text">Фоторамки</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="souvenir" value="таблички">
+                            <span class="checkmark"></span>  
+                            <span class="checkbox-label-text">Декоративные таблички</span>
+                        </label>
+                        <button type="button" class="reset-filter-btn">Очистить фильтр</button>
+                      </div>
+                    </div>
+                  </div>
+              
+              <div class="catalog-search">
+                <!-- ПОИСК ПО КАТАЛОГУ -->
+                <span class="search-icon"></span>
+                <input type="text" id="search-input" placeholder="Поиск по каталогу">
+              </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- КАТАЛОГ -->
+    <section class="catalog-cont">
+        <div id="catalog-grid" class="catalog-grid"></div>
+        <p id="not-found-msg" style="display: none;"></p>
+        <button class="button" id="load-more-btn">Загрузить ещё</button>
+    </section>
+    
+
+    <section class="contact">
+        <div class="contact-header">
+            <p class="section-h1" id="cont-h1">Хотите что-то особенное? </br>Напишите нам ❤</p>
+        </div>
+        <div class="contact-container">
+            <div class="cont-item">
+                <img src="photo/icons/phone_icon.svg" alt="logo_social" id="contact-img">
+                <p class="cont">+7&nbsp;(123)&nbsp;456-78-90</p>
+            </div>
+            <div class="cont-item">
+                <img src="photo/icons/mail_icon.svg" alt="logo_social" id="contact-img">
+                <p class="cont">printovostore@yandex.ru</p>
+            </div>
+        </div>
+    </section>
+
+  </main>
+  <footer>
+    <div class="foot-empty"></div>
+    <div class="foot-content">
+      <div class="foot-cont-logo">
+        <img class="foot-logo" src="photo/icons/logo-nav.svg" alt="logo">
+        <p>Уникальные изделия напечатанные с&nbsp;любовью</p>
+      </div>
+      <div class="foot-cont-marketplace">
+        <p>Мы на маркетплейсах</p>
+          <img src="photo/icons/ozon_icon.svg" alt="logo_marketplace" id="nprdct-links-img">
+          <img src="photo/icons/wb_icon.svg" alt="logo_marketplace" id="nprdct-links-img">
+          <img src="photo/icons/yamarket_icon.svg" alt="logo_marketplace" id="nprdct-links-img">
+      </div>
+      <div class="foot-cont-nav">
+        <a href="Index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+      <div class="foot-cont-social">
+        <p>Наши соцсети</p>
+          <img src="photo/icons/tg_icon.svg" alt="logo_social" id="foot-soc-img">
+          <img src="photo/icons/vk_icon.svg" alt="logo_social" id="foot-soc-img">
+          <img src="photo/icons/inst_icon.svg" alt="logo_social" id="foot-soc-img">
+      </div>
+    </div>
+    <div class="foot-author">
+      <p>2025 Printovo. All rights reserved.</p>
+      <p>Designed by Panasenko Sophia</p>
+    </div>
+  </footer>
+</div>
+  <!-- МОДАЛКА -->
+  <div class="modal-overlay">
+    <div class="modal" id="product-modal">
+      <div class="modal-content">
+        <!-- Хедер с крестиком -->
+        <div class="modal-header">
+          <div class="close-btn" ></div>
+          
+        </div>
+    
+        <div class="modal-body">
+          <!-- Левая часть с изображениями -->
+          <div class="product-images">
+            <div class="main-image">
+              <img src="" alt="Основное фото" id="main-img">
+            </div>
+                <div class="thumbnail-gallery">
+                    <div class="scroll-inner"></div>
+                <!-- Миниатюры изображений будут добавляться здесь через JS -->
+                </div>
+          </div>
+    
+          <!-- Правая часть с информацией о товаре -->
+          <div class="product-info">
+            <div class="product-name-wrap">
+              <p class="product-name"></p>
+              <p class="subtitle"></p>
+            </div>
+            
+            <div class="product-otherinfo-wrap">
+              <p class="modal-h2">Описание</p>
+              <p class="description"></p>
+      
+              <!-- Выбор цвета -->
+              <!-- <label for="color-select">Цвета:</label> -->
+               <p class="modal-h2" id="color-select-h2">Цвета</p>
+              <!-- <select id="color-select">
+              </select> -->
+              <div class="custom-select" id="custom-color-select">
+                <div class="select-trigger">
+                  <span class="selected-text">Выберите цвет</span>
+                  <div class="arrow">
+                  </div>
+                </div>
+                <div class="options hidden"></div>
+              </div>
+      
+              <!-- Ссылки на маркетплейсы -->
+              <p class="modal-h2">Купить на маркетплейсах</p>
+              <div class="marketplaces">
+              </div>
+      
+              <!-- Характеристики -->
+               <p class="modal-h2">Характеристики</p>
+              <div class="specs">
+                
+                <!-- Характеристики будут добавляться здесь через JS -->
+              </div>
+      
+              <!-- Примечание -->
+              <p class="note"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>  
+  <script src="js/mobile.js"></script>
+  <script src="js/product_base.js"></script>
+  <script src="js/catalog.js"></script>
+  
+
+
+</body>
+</html>
